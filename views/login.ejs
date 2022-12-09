@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/menu.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Infantzia</title>
+</head>
+<body>
+
+    <br><br><br>
+<div class="row">
+    <div class="col-7" style="height: 100%;">
+            <div style="margin-left: 10%;">
+                <img class="text-center" src="logo.jpeg" alt="img bienvenida"  style="width:90%; height: 90%; background-repeat: no-repeat;
+          background-size: cover;"> 
+            </div>
+       
+    </div>
+    <div class="col-5" id="col3">
+        <div class="login" style="
+        background-color: aquamarine;
+    width: 80%;
+    height: 170%;
+    box-shadow: 26px -22px 0px 4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 26px -22px 0px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 26px -22px 0px 4px rgba(0,0,0,0.75);
+        "><br><br><br>
+            <h2 class="text-center">
+                USUARIO
+            </h2><br><br><br><br>
+            <div class="inputs">
+
+                <form action="/saveLogin" method="post" class="row row-cols-lg-auto g-3 align-items-center">
+          
+                    <div class="col-12">
+                      <label class="visually-hidden" for="edad">Nombre de Usuario</label>
+                      <div class="input-group">
+                        <div class="input-group-text">Nombre de Usuario</div>
+                        <input type="text" id="user" name="user">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="visually-hidden" for="edad">Password</label>
+                        <div class="input-group">
+                          <div class="input-group-text">Password</div>
+                          <input type="password" id="pin" name="pin">
+                        </div>
+                      </div>
+                  
+                  <br><br>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary" tabindex="5">Submit</button>
+                    </div>
+                  </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>

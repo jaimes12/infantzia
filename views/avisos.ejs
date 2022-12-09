@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/menu.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Infantzia</title>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-3 text-center"><br><br><br><br>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/inicio"><div class="bg-warning text-white " style="padding: 20px;border-radius: 10px;">BIENVENIDO</div></a>
+            </li>
+            <li class="nav-item bg-orange">
+              <a class="nav-link active "  aria-current="page" href="/pacientes"><div class="bg-warning text-white " style="padding: 20px;border-radius: 10px;">PACIENTES</div></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="/calendario"><div class="bg-warning text-white " style="padding: 20px;border-radius: 10px;">CALENDARIO</div></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active disabled" ><div class="bg-secondary text-white " style="padding: 20px;border-radius: 10px;">AVISOS</div></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/docs"><div class="bg-warning text-white " style="padding: 20px;border-radius: 10px;">DOCUMENTOS</div></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/login"><div class="bg-warning text-white " style="padding: 20px;border-radius: 10px;">SALIR</div></a>
+            </li>
+          </ul>
+        </div>
+    
+
+    <div class="col-9" id="bienvenida"><br><br>
+
+        <H1 style="background-color:white ;"  class="text-center">AVISOS</H1><br><br>
+
+        <!-- //==================================================== -->
+
+        <form action="/saveAviso" method="post" class="row row-cols-lg-auto g-3 align-items-center">
+          
+            <div class="col-12">
+              <label class="visually-hidden" for="edad">Fecha</label>
+              <div class="input-group">
+                <div class="input-group-text">Fecha</div>
+                <textarea id="avisos" name="avisos" placeholder="Añadir aviso..." cols="80" rows="10"></textarea>
+              </div>
+            </div>
+          
+          <br><br>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary" tabindex="5">Submit</button>
+            </div>
+          </form>
+
+           <!-- //==================================================== -->
+
+<br><br><br>
+          <table class="table bg-white text-center">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">AVISOS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% results.forEach((user)=>{ %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.avisos %></td>
+
+                    <td><a href="/delete2/<%= user.id %>" class="btn btn-outline-danger">eliminar</a></td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+      </div>
+
+    </div>
+    
+</body>
+</html>
